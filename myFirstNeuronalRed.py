@@ -5,9 +5,9 @@ print("TensorFlow version: " + tf.__version__)
 
 
 # Funcion para creacion de capa neuronal
-def capa_neuronal(densidad, forma):
-    capa = tf.keras.layers.Dense(units=densidad, input_shape=[forma])
-    modelo = tf.keras.sequential([capa])
+def capa_neuronal(densidad, entradas):
+    capa = tf.keras.layers.Dense(units=densidad, input_shape=[entradas])
+    modelo = tf.keras.Sequential([capa])
     return modelo
 
 modelo = capa_neuronal(1,1)  # 1 neurona, 1 forma
